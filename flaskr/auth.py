@@ -3,7 +3,7 @@ from flask import Blueprint,g,flash,redirect,render_template,request,session,url
 from werkzeug.security import check_password_hash,generate_password_hash
 from flaskr.db import get_db
 
-db = Blueprint('auth', __name__,url_prefix='/auth')
+bp = Blueprint('auth', __name__,url_prefix='/auth')
 
 @bp.route("/register",methods=("GET","POST"))
 def register():
